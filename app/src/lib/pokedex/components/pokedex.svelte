@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { clamp } from "$lib/utils/math";
 	import type { Pokemon } from "../types";
+	import PokemonImage from "./pokemon-image.svelte";
 	import PokemonList from "./pokemon-list.svelte";
 
   export let pokemons: Pokemon[];
@@ -15,6 +16,11 @@
   }
 </script>
 
-<div on:wheel|preventDefault={handleScroll}>
-  <PokemonList pokemons={pokemons} selected={selected}/>
+<div class="flex flex-row items-center">
+  <div>
+    <PokemonImage pokemon={pokemons[selected - 1]}/>
+  </div>
+  <div class="flex-1" on:wheel|preventDefault={handleScroll}>
+    <PokemonList pokemons={pokemons} selected={selected}/>
+  </div>
 </div>

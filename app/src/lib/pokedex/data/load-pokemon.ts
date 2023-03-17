@@ -1,4 +1,4 @@
-import type { Pokemon } from "./types";
+import type { Pokemon } from "../types";
 
 export async function loadPokemonForList(fetch: (input: RequestInfo | URL, init?: RequestInit | undefined) => Promise<Response>): Promise<Pokemon[]> {
   const result: Pokemon[] = [];
@@ -16,10 +16,8 @@ export async function loadPokemonForList(fetch: (input: RequestInfo | URL, init?
       id: jsonResult.id,
       name: jsonResult.name,
       imageUrl: jsonResult.sprites.other["official-artwork"].front_default,
-      primaryType: {
-        name: jsonResult.types[0].type.name
-      },
-      secondaryType: jsonResult.types[1] !== undefined ? {name: jsonResult.types[1].type.name} : undefined,
+      primaryType: jsonResult.types[0].type.name,
+      secondaryType: jsonResult.types[1] !== undefined ? jsonResult.types[1].type.name : undefined,
     });
   }
 
