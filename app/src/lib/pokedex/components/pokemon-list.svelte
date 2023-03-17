@@ -1,3 +1,12 @@
 <script lang="ts">
-  
+	import type { Pokemon } from "../types";
+	import PokemonListElement from "./pokemon-list-element.svelte";
+
+  export let pokemons: Pokemon[];
 </script>
+
+<ul>
+  {#each pokemons as pokemon (pokemon.id)}
+    <PokemonListElement pokemon={pokemon} selected={pokemon.id === 1}/>
+  {/each}
+</ul>
