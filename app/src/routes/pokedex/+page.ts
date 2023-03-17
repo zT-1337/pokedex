@@ -1,4 +1,4 @@
-import { loadPokemonForList } from "../../lib/pokedex/load-pokemon"
+import { loadPokemonForList } from "../../lib/pokedex/data/load-pokemon"
 import type { PageLoad } from "./$types";
 
 export const load = (async ({fetch}) => {
