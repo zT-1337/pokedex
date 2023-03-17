@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { clamp } from "$lib/utils/math";
 	import type { Pokemon } from "../types";
 	import PokemonListElement from "./pokemon-list-element.svelte";
 
@@ -7,8 +6,8 @@
   export let selected = 1;
 </script>
 
-<ul>
+<ul class="overflow-hidden h-[750px]">
   {#each pokemons as pokemon (pokemon.id)}
-    <PokemonListElement pokemon={pokemon} selected={pokemon.id === selected}/>
+    <PokemonListElement pokemon={pokemon} selectedIndex={selected}/>
   {/each}
 </ul>

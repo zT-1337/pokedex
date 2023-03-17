@@ -20,7 +20,7 @@
   <div>
     <PokemonImage pokemon={pokemons[selected - 1]}/>
   </div>
-  <div class="flex-1" on:wheel|preventDefault={handleScroll}>
+  <div class="flex-1 overflow-hidden" on:wheel|preventDefault={handleScroll}>
     <PokemonList pokemons={pokemons} selected={selected}/>
   </div>
 </div>
