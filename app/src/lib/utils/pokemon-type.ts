@@ -44,3 +44,13 @@ export function typeToColor(type: PokemonType): string {
       return "#713f71";
   }
 }
+
+export function getBackgroundColorOfPokemon(primaryType: PokemonType, secondaryType: PokemonType | null) {
+  if(!secondaryType) {
+    return `background-color: ${typeToColor(primaryType)}`;
+  }
+
+  const primaryTypeColor = typeToColor(primaryType);
+  const secondaryTypeColor = typeToColor(secondaryType);
+  return `background: linear-gradient(135deg, ${primaryTypeColor} 0%, ${primaryTypeColor} 50%, ${secondaryTypeColor} 50%, ${secondaryTypeColor} 100%)`;
+}
