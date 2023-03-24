@@ -1,5 +1,5 @@
-import { getAllPokemon } from "$lib/server/load-pokemon.server";
-import type { PageLoad } from "./$types";
+import { getAllPokemon } from "$lib/server/pokedex/load-pokemon.server";
+import type { PageServerLoad } from "./$types";
 
 export const load = (async () => {
   const pokemon = await getAllPokemon();
@@ -7,4 +7,4 @@ export const load = (async () => {
   return {
     pokemon
   };
-}) satisfies PageLoad;
+}) satisfies PageServerLoad;
