@@ -1,4 +1,4 @@
-import type { Pokemon } from "../types";
+import type { Pokemon } from "@prisma/client";
 
 export async function loadPokemonForList(fetch: (input: RequestInfo | URL, init?: RequestInit | undefined) => Promise<Response>): Promise<Pokemon[]> {
   const result: Pokemon[] = [];
