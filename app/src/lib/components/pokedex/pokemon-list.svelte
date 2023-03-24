@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Pokemon } from "../types";
+	import type { Pokemon } from "@prisma/client";
 	import PokemonListElement from "./pokemon-list-element.svelte";
 
   export let pokemons: Pokemon[];

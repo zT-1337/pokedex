@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Pokedex from "$lib/pokedex/components/pokedex.svelte";
-import type { PageData } from "./$types";
+  import Pokedex from "$lib/components/pokedex/pokedex.svelte";
+  import type { PageData } from "./$types";
 
   export let data: PageData;
 </script>

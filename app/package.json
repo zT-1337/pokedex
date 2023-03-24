@@ -38,6 +38,6 @@
 		"daisyui": "^2.51.4"
 	},
 	"prisma": {
-		"seed": "tsx seed.ts"
+		"seed": "tsx prisma/seed.ts"
 	}
 }

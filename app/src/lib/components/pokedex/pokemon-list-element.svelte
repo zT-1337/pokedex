@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Pokemon } from "../types";
+	import type { Pokemon } from "@prisma/client";
 
   export let pokemon: Pokemon;
   export let selectedIndex: number;

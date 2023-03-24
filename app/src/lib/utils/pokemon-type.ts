@@ -1,4 +1,4 @@
-import type { PokemonType } from "../types";
+import type { PokemonType } from "@prisma/client";
 
 export function typeToColor(type: PokemonType): string {
   switch(type) {

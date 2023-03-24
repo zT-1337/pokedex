@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Pokemon } from "../types";
-	import { typeToColor } from "../utils/pokemon-type";
+	import { typeToColor } from "$lib/utils/pokemon-type";
+	import type { Pokemon } from "@prisma/client";
 
   export let pokemon: Pokemon;
 

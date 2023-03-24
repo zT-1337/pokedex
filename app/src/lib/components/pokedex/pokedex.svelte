@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { clamp } from "$lib/utils/math";
-	import type { Pokemon } from "../types";
+	import type { Pokemon } from "@prisma/client";
 	import PokemonImage from "./pokemon-image.svelte";
 	import PokemonList from "./pokemon-list.svelte";
 
